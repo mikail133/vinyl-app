@@ -8,19 +8,19 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Ставим элементы в верхнюю часть экрана */
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f1cfff; /* Фон страницы фиолетовый */
+            background-color: #ffffff; /* Фиолетовый фон */
             font-family: 'Arial', sans-serif;
         }
 
         .vinyl-container {
             position: relative;
-            width: 350px;
-            height: 350px;
-            margin-bottom: 20px;
+            width: 250px; /* Размер пластинки */
+            height: 250px;
+            margin-top: 50px; /* Отступ сверху для эстетики */
         }
 
         .vinyl {
@@ -30,9 +30,8 @@
             background-image: url('record.webp'); /* Используется ваше изображение */
             background-size: cover;
             background-position: center;
-            position: relative;
-            animation: spin 0s linear infinite; /* По умолчанию анимация не вращается */
-            transition: animation-duration 1.5s ease; /* Плавное изменение скорости */
+            animation: spin 0s linear infinite; /* По умолчанию пластинка не крутится */
+            transition: animation-duration 1.5s ease; /* Плавное изменение скорости вращения */
         }
 
         @keyframes spin {
@@ -53,6 +52,7 @@
             border-radius: 5px;
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 30px; /* Отступ от пластинки */
             transition: background-color 0.3s;
         }
 
@@ -94,4 +94,3 @@
 
 </body>
 </html>
-
